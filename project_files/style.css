@@ -1,0 +1,38 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Kanit', sans-serif;
+    background-color: #f0f2f5; /* สีพื้นหลังโทนเทาอ่อน สบายตา */
+    color: #333;
+}
+
+.card-custom {
+    border: none;
+    border-radius: 15px; /* ขอบมน */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* เงานุ่มๆ */
+    background: white;
+    transition: transform 0.2s;
+}
+
+.btn-custom {
+    border-radius: 50px; /* ปุ่มแคปซูล */
+    padding: 8px 20px;
+    font-weight: 500;
+}
+
+.table-custom thead th {
+    background-color: #4e73df; /* สีหัวตารางแบบ Modern Blue */
+    color: white;
+    border: none;
+}
+
+.table-custom tbody tr:hover {
+    background-color: #f8f9fc; /* ไฮไลท์เมื่อเอาเมาส์ชี้ */
+}
+
+.status-badge {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85em;
+}

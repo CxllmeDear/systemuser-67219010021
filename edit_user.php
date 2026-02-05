@@ -49,8 +49,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <option value="admin" <?php if($row['role']=='admin') echo 'selected'; ?>>Admin</option>
             </select>
         </div>
-        <button type="submit" class="btn btn-warning">อัปเดตข้อมูล</button>
-        <a href="account.php" class="btn btn-secondary">ยกเลิก</a>
+        <button type="submit" class="btn btn-warning">อัปเดตข้อมูล</button> <br>
+        <a href="account.php" class="btn btn-secondary">ยกเลิก</a> <br>
     </form>
 </body>
 </html>

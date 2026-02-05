@@ -1,5 +1,12 @@
 <?php
+session_start();
 include 'db.php'; // เรียกไฟล์เชื่อมต่อฐานข้อมูล
+
+// เช็คว่าล็อกอินหรือยัง? ถ้ายัง ให้ดีดไปหน้า login
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit();
+}
 
 // ดึงข้อมูลผู้ใช้ทั้งหมดจากตาราง users
 $sql = "SELECT * FROM users ORDER BY id DESC";
@@ -19,6 +26,14 @@ $result = $conn->query($sql);
         <h1>รายชื่อผู้ใช้ในระบบ</h1>
         <a href="add_user.php" class="btn btn-success">+ เพิ่มผู้ใช้ใหม่</a>
     </div>
+
+    <div class="d-flex justify-content-between mb-3 align-items-center">
+    <h3>ยินดีต้อนรับ, <?php echo $_SESSION['user_name']; ?></h3>
+    <div>
+        <a href="add_user.php" class="btn btn-success">+ เพิ่มผู้ใช้</a>
+        <a href="logout.php" class="btn btn-secondary">ออกจากระบบ</a>
+    </div>
+</div>
 
     <table class="table table-bordered table-striped">
         <thead class="table-dark">
